@@ -14,4 +14,6 @@ HTML/CSS/JS
 
 ## Link
 
+https://cmwschroeder.github.io/work-day-scheduler/
+
 ## Usage
