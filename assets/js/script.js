@@ -1,6 +1,15 @@
 var allTImes = $(".container");
 
 function buildDay() {
+    for(var i = 9; i < 13; i++) {
+        buildHour(i, true);
+    }
+    for(i = 1; i < 6; i++) {
+        buildHour(i, false);
+    }
+};
+
+function buildHour(hour, am) {
     var div = $('<div>');
     div.addClass('time-block');
     div.addClass('row');
@@ -8,7 +17,12 @@ function buildDay() {
 
     var p = $('<p>');
     p.addClass('hour');
-    p.text("9 a.m.");
+    if(am) {
+        p.text(hour + " a.m.");
+    } 
+    else {
+        p.text(hour + " p.m.");
+    }
     p.addClass('col-sm-1');
 
     var form = $('<form>');
