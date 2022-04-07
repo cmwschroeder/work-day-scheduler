@@ -2,9 +2,21 @@ var today = moment();
 var allTimes = $(".container");
 var dateEl = $("#currentDay");
 
-function buildDay() {
+var currHour = today.hour();
+var isAm;
+
+function buildDay() {   
+    if(currHour >= 12) {
+        am = false;
+        if (currHour > 12) {
+            currHour = currHour - 12;
+        }
+    }
+    else {
+        am = true;
+    }
     allTimes.addClass('mb-3');
-    dateEl.text(today.format("MMM Do, YYYY"));
+    console.log(today.hour());
     for(var i = 9; i < 13; i++) {
         buildHour(i, true);
     }
@@ -31,7 +43,46 @@ function buildHour(hour, am) {
 
     var form = $('<form>');
     var input = $('<textarea>');
-    input.addClass('present w-100 h-100');
+    input.addClass('w-100 h-100');
+    if(am && isAm) {
+        if(currHour > hour) {
+            input.addClass('past');
+        }
+        else if(currHour == hour) {
+            input.addClass('present');
+        }
+        else {
+            input.addClass('future');
+        }
+    }
+    else if (!am && !isAm) {
+        if(currHour == 12 || hour == 12) {
+            if(currHour == 12 && hour != 12) {
+                input.addClass('future');
+            }
+            else if (currHour == 12 && hour == 12) {
+                input.addClass('present');
+            }
+            else {
+                input.addClass('past');
+            }
+        }
+        else if(currHour > hour) {
+            input.addClass('past');
+        }
+        else if(currHour == hour) {
+            input.addClass('present');
+        }
+        else {
+            input.addClass('future');
+        }
+    }
+    else if (!am && isAm) {
+        input.addClass('future');
+    }
+    else {
+        input.addClass('past');
+    }
     form.append(input);
     form.addClass('col-sm-10 p-0');
 
