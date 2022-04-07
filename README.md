@@ -27,3 +27,11 @@ There are limitations to this page. When an event is saved then it will be saved
 https://cmwschroeder.github.io/work-day-scheduler/
 
 ## Usage
+
+Here is the page opened at 4pm with different things already written in the schedule page. Past hours are gray, present is red, future is green.
+
+You can delete things from the list.
+
+You can add things to the list.
+
+And they will stay there until you delete them. As seen by loading this page later at 5pm.
