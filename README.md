@@ -17,15 +17,10 @@ There are limitations to this page. When an event is saved then it will be saved
 | Technology | Link |
 | -------- | ------|
 | HTML |    |
-| -------- | ------|
 | CSS |    |
-| -------- | ------|
 | Javascript|    |
-| -------- | ------|
 | Jquery | https://jquery.com/ |
-| -------- | ------|
 | Bootstrap | https://getbootstrap.com/ |
-| -------- | ------|
 | Moment | https://momentjs.com/
 ## Link
 
