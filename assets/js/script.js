@@ -1,6 +1,10 @@
-var allTImes = $(".container");
+var today = moment();
+var allTimes = $(".container");
+var dateEl = $("#currentDay");
 
 function buildDay() {
+    allTimes.addClass('mb-3');
+    dateEl.text(today.format("MMM Do, YYYY"));
     for(var i = 9; i < 13; i++) {
         buildHour(i, true);
     }
@@ -39,7 +43,7 @@ function buildHour(hour, am) {
     div.append(p);
     div.append(form);
     div.append(btn);
-    allTImes.append(div);
+    allTimes.append(div);
 };
 
 buildDay();
