@@ -29,9 +29,13 @@ https://cmwschroeder.github.io/work-day-scheduler/
 ## Usage
 
 Here is the page opened at 4pm with different things already written in the schedule page. Past hours are gray, present is red, future is green.
+![Page on load](https://github.com/cmwschroeder/work-day-scheduler/blob/main/assets/images/screenshot-one.png)  
 
 You can delete things from the list.
+![After one of the text items was deleted](https://github.com/cmwschroeder/work-day-scheduler/blob/main/assets/images/screenshot-two.png)  
 
 You can add things to the list.
+![After a text item was added](https://github.com/cmwschroeder/work-day-scheduler/blob/main/assets/images/screenshot-three.png)  
 
 And they will stay there until you delete them. As seen by loading this page later at 5pm.
+![On page reload at 5pm](https://github.com/cmwschroeder/work-day-scheduler/blob/main/assets/images/screenshot-four.png)  
